@@ -1,0 +1,5 @@
+Tetris piece Generator
+
+at the end i can change from for to generate pieces for different numbers of blocks, not just 4. thats the i/o side of things.
+
+

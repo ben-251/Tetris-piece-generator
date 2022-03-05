@@ -1,0 +1,17 @@
+#checking if the piece is valid (every block touches at least one other)
+
+1. if the x_value is the same as another x_value, and the y_value differs by one, or the y_value is the same as another y_value, and the x_value differs by one, then the piece touches another.
+
+2. once it sees that one x or y value does not match any others, return False
+	2.1 loop through the all x values (current_block)
+	2.2 	loop through the x values (other_block)
+	2.3 		if current_block == other_block:
+					send current_block, other_block to step 3.
+
+	//repeat with y values
+
+3. once it sees one matching x or y, take both to the next stage for comparing #assuming x for ease of explanation
+	3.1. look at the y values, if abs(other_y - original_y) = 1, then the piece is valid. return True
+	3.2. if not, dont return false but keep checking through to see if there are any more matches. if yes then got to line 3.1: "..if abs(other..." if not, return False
+
+4. Finally, if you go through all of this and haven't returned True or False, print("Exception" and display all values (or i can have a breakpoint here))
